@@ -1,0 +1,17 @@
+<% layout('/layouts/boilerplate') -%><%= success %><%= error %>
+
+<body>
+    <h3>Listing Details</h3>
+    <ul>
+        <li><%= listing.title %></li>
+        <li><%= listing.content %></li>
+        <li><%= listing.author %></li>
+
+    </ul>
+    <a href="/bloglisting/<%= listing._id %>/edit">Edit this Listing</a>
+    <form method="post" action="/bloglisting/<%= listing._id %>?_method=DELETE">
+        <button>delete</button>
+    </form>
+                                   
+    
+</body>
